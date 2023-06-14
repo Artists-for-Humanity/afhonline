@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-
 const Home = () => {
   return (
     <div className={styles.container}>
@@ -12,12 +11,8 @@ const Home = () => {
 
       <div className={styles.hero}>
         <div className={styles.heroContent}>
-
-          {/* <img className="sticker" src="/path/to/sticker-image.png" alt="Sticker" /> */}
-
           <h1 className={styles.title}>
-            <div>
-              Welcome to</div> <div> AFH Online</div>
+            <div> Welcome to AFH Online</div>
           </h1>
           <p className={styles.description}>
             Artists For Humanity’s online community build on 32 years of mentoring experience.
@@ -27,8 +22,45 @@ const Home = () => {
           </button>
         </div>
       </div >
+      <div className={styles.pageContent}>
 
-      <div className={styles.subheader}> AFH Online expands the AFH mission of empowering teens to succeed in the creative industry! Ready to become a creator?</div>
+        <div className={styles.blurb}> AFH Online expands the AFH mission of empowering teens to succeed in the creative industry! Ready to become a creator?</div>
+        <div className={styles.subheader}> Start Creating</div>
+
+        {/* home scroll  */}
+        <div className={styles.homeScroll}>
+          <div className={styles.backButton}>
+            <img src="images/backArrow.png"></img>
+          </div>
+          <div className={styles.lessonCard}>
+            <div className={styles.previewImage}></div>
+            <div className={styles.cardInfo}>
+              <div className={styles.studioChip}>Graphic Design</div>
+              <div className={styles.cardTitle}> Doodle-to-Vector</div>
+              <div className={styles.cardAuthor}>By Mikey Guderama</div>
+              <div className={styles.cardDescription}>Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics.</div>
+
+            </div>
+
+          </div>
+          <div className={styles.forwardButton}>
+            <img src="images/forwardArrow.png"></img>
+          </div>
+        </div>
+
+        <div className={styles.subheader}> Create by Studio</div>
+
+        <div className={styles.grid}>
+          <div className={styles.graphic}> <div className={styles.studioText}>Graphic Design</div></div>
+          <div className={styles.ctech}> <div className={styles.studioText}>CTech</div></div>
+          <div className={styles.paint}> <div className={styles.studioText}>Paint</div></div>
+          <div className={styles.video}> <div className={styles.studioText}>Video</div></div>
+          <div className={styles.design}> <div className={styles.studioText}>3D design</div></div>
+          <div className={styles.photo}> <div className={styles.studioText}>Photo</div></div>
+        </div >
+
+      </div >
+
       {/* <div className={styles.icon1}>
         <img src="images/afhpeep1.png"></img>
       </div> */}
@@ -64,6 +96,18 @@ const Home = () => {
         img {
           max-width: 100%;
           height: auto;
+          border: 6px solid #000000;
+          transition: 0.3s;
+          border-radius: 16px;
+          margin-top:100px;
+      
+        }
+
+        img:hover{
+          box-shadow: 6px 6px 0px #000000;
+          transform: translateX(-10px);
+          transition: 0.3s;
+
         }
         
         h1,
