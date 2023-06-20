@@ -38,7 +38,9 @@ const studioHome = () => {
           last="Guderama"
           role="Lead Graphic Designer"
         />
-
+        <div className={styles.forwardButton}>
+          <img src="images/forwardArrow.png"></img>
+        </div>
       </div>
 
       <div className={styles.workshop}> Our Workshop </div>
@@ -69,9 +71,7 @@ const studioHome = () => {
           caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
         />
 
-        <div className={styles.forwardButton}>
-          <img src="images/forwardArrow.png"></img>
-        </div>
+
       </div>
 
 
