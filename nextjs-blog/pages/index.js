@@ -67,24 +67,28 @@ const Home = () => {
             {
               slug: "ctech",
               name: "CTech",
-              color: "#FF0000",
+              color: "#FF3700",
             },
             {
               slug: "paint",
               name: "Paint",
-              color: "#00FF00",
+              color: "#F7FF00",
             },
             {
               slug: "video",
               name: "Video",
-              color: "#DD98CE",
+              color: "#9747FF",
             },
             {
               slug: "3d-design",
               name: "3D design",
-              color: "#0DDE79",
+              color: "#52FF71",
             },
-            { slug: "photo", name: "Photo", color: "#008CFF" },
+            {
+              slug: "photo",
+              name: "Photo",
+              color: "#FFBC05"
+            },
           ]}
         />
       </div>

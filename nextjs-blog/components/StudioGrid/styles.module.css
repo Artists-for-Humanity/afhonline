@@ -5,6 +5,7 @@
   /* Use a variable here so you don't have to write the whole grid-template-columns at each breakpoint */
   grid-template-columns: repeat(var(--columns), 1fr);
   gap: 30px;
+  margin-bottom:64px;
 }
 
 @media screen and (min-width: 700px) {
