@@ -1,7 +1,13 @@
+.container{
+    font-family: 'Boring Sans Variable';
+
+}
+
 .hero{
     background: #F7FF00;
     padding-left:6%;
     padding-bottom:30px;
+    margin-bottom:50px;
 }
 
 .title {
@@ -20,5 +26,14 @@
     font-size: 15px;
     line-height: 175%;
     width: 50%;
+    max-width: 500px;
     
+}
+
+.subheader {
+    font-style: normal;
+    font-weight: 730;
+    font-size: 40px;
+    line-height: 150%;
+    margin-left:4%;
 }
