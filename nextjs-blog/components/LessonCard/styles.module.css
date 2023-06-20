@@ -7,6 +7,7 @@
     box-shadow: none;
     border-radius: 8px;
     transition: 0.3s;
+    margin-bottom: 40px;
   }
   
   .lessonCard:hover{

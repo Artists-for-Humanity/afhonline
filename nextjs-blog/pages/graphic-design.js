@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import styles from "../styles/studioHome.module.css";
+import MentorCard from "../components/MentorCard";
 
 
 
@@ -18,6 +19,26 @@ const studioHome = () => {
       </div>
 
 
+      <div className={styles.subheader}> Meet the Mentors </div>
+      <div className={styles.mentorCards}>
+        <MentorCard
+          first="Mikey"
+          last="Guderama"
+          role="Lead Graphic Designer"
+        />
+        <MentorCard
+          first="Mikey"
+          last="Guderama"
+          role="Lead Graphic Designer"
+        />
+
+        <MentorCard
+          first="Mikey"
+          last="Guderama"
+          role="Lead Graphic Designer"
+        />
+
+      </div>
       <style jsx global>{`
         html,
         body {

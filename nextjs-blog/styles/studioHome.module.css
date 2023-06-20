@@ -37,3 +37,9 @@
     line-height: 150%;
     margin-left:4%;
 }
+
+.mentorCards {
+    display: flex;
+    flex-direction: row;
+    margin-left:4%;
+}
