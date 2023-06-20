@@ -1,0 +1,36 @@
+.Block {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  border: 6px solid #000000;
+  border-radius: 8px;
+  text-align: center;
+  height: 200px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .Block {
+    font-size: 48px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Block {
+    font-size: 64px;
+  }
+}
+
+.Inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.Inner:hover {
+  transition: 0.3s;
+  background: var(--color);
+}

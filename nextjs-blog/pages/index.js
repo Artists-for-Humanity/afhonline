@@ -1,115 +1,157 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import React from "react";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import StudioGrid from "../components/StudioGrid";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>AFH ONLINE</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.title}>
+            <div> Welcome to AFH Online</div>
+          </h1>
+          <p className={styles.description}>
+            Artists For Humanity’s online community build on 32 years of
+            mentoring experience.
+          </p>
+          <button className={styles.button}>
+            <div className={styles.buttontext}>Start Creating</div>
+          </button>
         </div>
-      </main>
+      </div>
+      <div className={styles.pageContent}>
+        <div className={styles.blurb}>
+          {" "}
+          AFH Online expands the AFH mission of empowering teens to succeed in
+          the creative industry! Ready to become a creator?
+        </div>
+        <div className={styles.subheader}> Start Creating</div>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
+        {/* home scroll  */}
+        <div className={styles.homeScroll}>
+          <div className={styles.backButton}>
+            <img src="images/backArrow.png"></img>
+          </div>
+          <div className={styles.lessonCard}>
+            <div className={styles.previewImage}></div>
+            <div className={styles.cardInfo}>
+              <div className={styles.studioChip}>Graphic Design</div>
+              <div className={styles.cardTitle}> Doodle-to-Vector</div>
+              <div className={styles.cardAuthor}>By Mikey Guderama</div>
+              <div className={styles.cardDescription}>
+                Unleash your inner doodler and learn how to transform your
+                sketches into vibrant and scalable vector graphics.
+              </div>
+            </div>
+          </div>
+          <div className={styles.forwardButton}>
+            <img src="images/forwardArrow.png"></img>
+          </div>
+        </div>
 
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
+        <div className={styles.subheader}> Create by Studio</div>
+
+        <StudioGrid
+          studios={[
+            {
+              slug: "graphic-design",
+              name: "Graphic Design",
+              color: "#008CFF",
+            },
+            {
+              slug: "ctech",
+              name: "CTech",
+              color: "#FF0000",
+            },
+            {
+              slug: "paint",
+              name: "Paint",
+              color: "#00FF00",
+            },
+            {
+              slug: "video",
+              name: "Video",
+              color: "#DD98CE",
+            },
+            {
+              slug: "3d-design",
+              name: "3D design",
+              color: "#0DDE79",
+            },
+            { slug: "photo", name: "Photo", color: "#008CFF" },
+          ]}
+        />
+      </div>
+
+      {/* <div className={styles.icon1}>
+        <img src="images/afhpeep1.png"></img>
+      </div> */}
+      {/* <div className={styles.icon2}>
+        <img src="images/afhpeep2.png"></img>
+      </div>
+      <div className={styles.icon3}>
+        <img src="images/afhpeep3.png"></img>
+      </div> */}
 
       <style jsx global>{`
         html,
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
+            Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+            Helvetica Neue, sans-serif;
         }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
         * {
           box-sizing: border-box;
         }
+
+        img {
+          max-width: 100%;
+          height: auto;
+          border: 6px solid #000000;
+          transition: 0.3s;
+          border-radius: 16px;
+          margin-top: 100px;
+        }
+
+        img:hover {
+          box-shadow: 6px 6px 0px #000000;
+          transform: translateX(-10px);
+          transition: 0.3s;
+        }
+
+        h1,
+        h2,
+        p,
+        ul {
+          margin: 0;
+        }
+
+        ul {
+          padding: 0;
+          list-style: none;
+        }
+
+        button {
+          padding: 0.5rem 1rem;
+          font-weight: bold;
+        }
       `}</style>
     </div>
-  )
-}
+  );
+};
+
+export default Home;

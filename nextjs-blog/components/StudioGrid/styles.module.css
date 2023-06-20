@@ -1,0 +1,20 @@
+.Container {
+  /* Variable used in grid-template-columns */
+  --columns: 1;
+  display: grid;
+  /* Use a variable here so you don't have to write the whole grid-template-columns at each breakpoint */
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 30px;
+}
+
+@media screen and (min-width: 700px) {
+  .Container {
+    --columns: 2;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Container {
+    --columns: 3;
+  }
+}
