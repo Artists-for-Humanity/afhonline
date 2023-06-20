@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styles from "../styles/studioHome.module.css";
 import MentorCard from "../components/MentorCard";
+import LessonCard from "../components/LessonCard";
 
 
 
@@ -39,6 +40,44 @@ const studioHome = () => {
         />
 
       </div>
+
+      <div className={styles.workshop}> Our Workshop </div>
+
+      <div className={styles.lessonCards}>
+        <LessonCard
+          studiochip="Graphic Design"
+          title="Doodle-to-Vector"
+          author="Mikey Guderama"
+          caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
+        />
+        <LessonCard
+          studiochip="Graphic Design"
+          title="Doodle-to-Vector"
+          author="Mikey Guderama"
+          caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
+        />
+        <LessonCard
+          studiochip="Graphic Design"
+          title="Doodle-to-Vector"
+          author="Mikey Guderama"
+          caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
+        />
+        <LessonCard
+          studiochip="Graphic Design"
+          title="Doodle-to-Vector"
+          author="Mikey Guderama"
+          caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
+        />
+
+        <div className={styles.forwardButton}>
+          <img src="images/forwardArrow.png"></img>
+        </div>
+      </div>
+
+
+
+
+
       <style jsx global>{`
         html,
         body {
