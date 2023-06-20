@@ -87,27 +87,6 @@ const Home = () => {
             { slug: "photo", name: "Photo", color: "#008CFF" },
           ]}
         />
-
-        {/* <div className={styles.grid}>
-          <div className={styles.graphic}>
-            <div className={styles.studioText}>Graphic Design</div>
-          </div>
-          <div className={styles.ctech}>
-            <div className={styles.studioText}>CTech</div>
-          </div>
-          <div className={styles.paint}>
-            <div className={styles.studioText}>Paint</div>
-          </div>
-          <div className={styles.video}>
-            <div className={styles.studioText}>Video</div>
-          </div>
-          <div className={styles.design}>
-            <div className={styles.studioText}>3D design</div>
-          </div>
-          <div className={styles.photo}>
-            <div className={styles.studioText}>Photo</div>
-          </div>
-        </div> */}
       </div>
 
       {/* <div className={styles.icon1}>
