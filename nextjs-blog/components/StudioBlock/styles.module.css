@@ -9,6 +9,11 @@
   padding: 20px;
 }
 
+.Block:hover {
+  background: var(--color);
+  transition: 0.3s;
+}
+
 @media screen and (min-width: 700px) {
   .Block {
     font-size: 48px;
@@ -28,9 +33,10 @@
   justify-content: center;
   height: 100%;
   padding: 40px;
+  background: var(--color);
 }
 
 .Inner:hover {
   transition: 0.3s;
-  background: var(--color);
+
 }

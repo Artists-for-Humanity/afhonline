@@ -1,0 +1,59 @@
+.container{
+    /* font-family: 'Boring Sans Variable'; */
+
+}
+
+.hero{
+    background: #F7FF00;
+    padding-left:6%;
+    padding-bottom:30px;
+    margin-bottom:50px;
+}
+
+.title {
+    padding-top: 70px;
+    margin-bottom:20px;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 80px;
+    line-height: 85px;
+    
+}
+
+.description {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 175%;
+    width: 50%;
+    max-width: 500px;
+    
+}
+
+.subheader {
+    font-style: normal;
+    font-weight: 730;
+    font-size: 50px;
+    line-height: 150%;
+    margin-left:4%;
+}
+
+.mentorCards {
+    display: flex;
+    flex-direction: row;
+    margin-left:4%;
+}
+
+.workshop {
+    font-style: normal;
+    font-weight: 730;
+    font-size: 64px;
+    line-height: 150%;
+    margin-left:4%;
+    margin-top:4%;
+}
+
+.lessonCards {
+    margin-left:6%;
+    margin-top:20px;
+}

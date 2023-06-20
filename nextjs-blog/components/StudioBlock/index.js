@@ -1,10 +1,10 @@
 import styles from "./styles.module.css";
 
-const StudioBlock = ({ name, color }) => {
+const StudioBlock = ({ name, color, slug }) => {
   return (
-    <div className={styles.Block} style={{ "--color": color }}>
+    <a href={slug} className={styles.Block} style={{ "--color": color }}>
       <div className={styles.Inner}>{name}</div>
-    </div>
+    </a>
   );
 };
 

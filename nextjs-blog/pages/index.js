@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import StudioGrid from "../components/StudioGrid";
+import LessonCard from "../components/LessonCard";
 
 const Home = () => {
   return (
@@ -38,18 +39,13 @@ const Home = () => {
           <div className={styles.backButton}>
             <img src="images/backArrow.png"></img>
           </div>
-          <div className={styles.lessonCard}>
-            <div className={styles.previewImage}></div>
-            <div className={styles.cardInfo}>
-              <div className={styles.studioChip}>Graphic Design</div>
-              <div className={styles.cardTitle}> Doodle-to-Vector</div>
-              <div className={styles.cardAuthor}>By Mikey Guderama</div>
-              <div className={styles.cardDescription}>
-                Unleash your inner doodler and learn how to transform your
-                sketches into vibrant and scalable vector graphics.
-              </div>
-            </div>
-          </div>
+          {/* lesson card */}
+          <LessonCard
+            studiochip="Graphic Design"
+            title="Doodle-to-Vector"
+            author="Mikey Guderama"
+            caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
+          />
           <div className={styles.forwardButton}>
             <img src="images/forwardArrow.png"></img>
           </div>
@@ -67,24 +63,28 @@ const Home = () => {
             {
               slug: "ctech",
               name: "CTech",
-              color: "#FF0000",
+              color: "#FF3700",
             },
             {
               slug: "paint",
               name: "Paint",
-              color: "#00FF00",
+              color: "#F7FF00",
             },
             {
               slug: "video",
               name: "Video",
-              color: "#DD98CE",
+              color: "#9747FF",
             },
             {
               slug: "3d-design",
               name: "3D design",
-              color: "#0DDE79",
+              color: "#52FF71",
             },
-            { slug: "photo", name: "Photo", color: "#008CFF" },
+            {
+              slug: "photo",
+              name: "Photo",
+              color: "#FFBC05"
+            },
           ]}
         />
       </div>
