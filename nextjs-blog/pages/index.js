@@ -102,15 +102,6 @@ const Home = () => {
         />
       </div>
 
-      {/* <div className={styles.icon1}>
-        <img src="images/afhpeep1.png"></img>
-      </div> */}
-      {/* <div className={styles.icon2}>
-        <img src="images/afhpeep2.png"></img>
-      </div>
-      <div className={styles.icon3}>
-        <img src="images/afhpeep3.png"></img>
-      </div> */}
 
       <style jsx global>{`
         html,
