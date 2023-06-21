@@ -110,6 +110,7 @@
   transition: 0.3s;
   border-radius: 16px;
   margin-top: 100px;
+  padding:10px;
 }
 
 .arrow:hover {

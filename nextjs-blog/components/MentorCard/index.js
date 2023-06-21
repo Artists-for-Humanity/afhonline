@@ -1,9 +1,16 @@
 import styles from "./styles.module.css";
+import Image from 'next/image'
 
 const MentorCard = ({ first, last, role, headshot }) => {
     return (
         <div className={styles.card}>
-            <div className={styles.headshot}></div>
+            <Image
+                src={headshot}
+                width={100}
+                height={100}
+                alt="Headshot"
+                className={styles.headshot}
+            />
             <div className={styles.mentorInfo}>
                 <div className={styles.name}>
                     <div>{first}</div>

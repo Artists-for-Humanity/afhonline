@@ -3,6 +3,7 @@ import StudioHome from "../components/StudioHome";
 import MentorCard from "../components/MentorCard";
 import LessonCard from "../components/LessonCard";
 import styles from "../styles/studioHome.module.css";
+import Image from 'next/image';
 
 
 
@@ -22,21 +23,30 @@ const graphicsHome = () => {
           first="Mikey"
           last="Guderama"
           role="Lead Graphic Designer"
+          headshot="/images/profile.png"
         />
         <MentorCard
           first="Mikey"
           last="Guderama"
           role="Lead Graphic Designer"
+          headshot="/images/profile.png"
+
         />
 
         <MentorCard
           first="Mikey"
           last="Guderama"
           role="Lead Graphic Designer"
+          headshot="/images/profile.png"
         />
-        <div className={styles.forwardButton}>
-          <img src="images/forwardArrow.png"></img>
-        </div>
+
+        <Image
+          src="/images/forwardArrow.png"
+          width={50}
+          height={50}
+          alt="Forward Arrow"
+          className={styles.arrow}
+        />
       </div>
 
       <div className={styles.workshop}> Our Workshops </div>
@@ -89,20 +99,6 @@ const graphicsHome = () => {
           box-sizing: border-box;
         }
 
-        img {
-          max-width: 100%;
-          height: auto;
-          border: 6px solid #000000;
-          transition: 0.3s;
-          border-radius: 16px;
-          margin-top: 100px;
-        }
-
-        img:hover {
-          box-shadow: 6px 6px 0px #000000;
-          transform: translateX(-10px);
-          transition: 0.3s;
-        }
 
         h1,
         h2,

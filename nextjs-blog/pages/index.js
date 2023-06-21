@@ -3,16 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import StudioGrid from "../components/StudioGrid";
 import LessonCard from "../components/LessonCard";
-import Image from 'next/image'
-
-// const backArrow = {
-//   width: '96px',
-//   height: '96px',
-//   border: '6px solid #000000',
-//   transition: '0.3s',
-//   borderRadius: '16px',
-//   marginTp: '100px'
-// }
+import Image from 'next/image';
 
 
 const Home = () => {

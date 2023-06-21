@@ -13,9 +13,7 @@
     border-style: solid;
     border-color: #000000;
     border-radius: 8px;
-    width: 150px;
-    height: 150px;
-    background-color: #000000;
+    background: #008CFF;
 }
 
 .mentorInfo {
