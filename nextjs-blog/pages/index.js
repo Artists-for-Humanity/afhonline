@@ -3,6 +3,17 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import StudioGrid from "../components/StudioGrid";
 import LessonCard from "../components/LessonCard";
+import Image from 'next/image'
+
+// const backArrow = {
+//   width: '96px',
+//   height: '96px',
+//   border: '6px solid #000000',
+//   transition: '0.3s',
+//   borderRadius: '16px',
+//   marginTp: '100px'
+// }
+
 
 const Home = () => {
   return (
@@ -34,12 +45,17 @@ const Home = () => {
         </div>
         <div className={styles.subheader}> Start Creating</div>
 
-        {/* home scroll  */}
+
         <div className={styles.homeScroll}>
           <div className={styles.backButton}>
-            <img src="images/backArrow.png"></img>
+            <Image
+              src="/images/backArrow.png"
+              width={50}
+              height={50}
+              alt="Back Arrow"
+              className={styles.arrow}
+            />
           </div>
-          {/* lesson card */}
           <LessonCard
             studiochip="Graphic Design"
             title="Doodle-to-Vector"
@@ -47,7 +63,13 @@ const Home = () => {
             caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
           />
           <div className={styles.forwardButton}>
-            <img src="images/forwardArrow.png"></img>
+            <Image
+              src="/images/forwardArrow.png"
+              width={50}
+              height={50}
+              alt="Forward Arrow"
+              className={styles.arrow}
+            />
           </div>
         </div>
 
@@ -116,21 +138,6 @@ const Home = () => {
 
         * {
           box-sizing: border-box;
-        }
-
-        img {
-          max-width: 100%;
-          height: auto;
-          border: 6px solid #000000;
-          transition: 0.3s;
-          border-radius: 16px;
-          margin-top: 100px;
-        }
-
-        img:hover {
-          box-shadow: 6px 6px 0px #000000;
-          transform: translateX(-10px);
-          transition: 0.3s;
         }
 
         h1,
