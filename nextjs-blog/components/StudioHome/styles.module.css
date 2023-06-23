@@ -1,0 +1,33 @@
+.container{
+    max-width: 100%;
+
+}
+
+
+.hero{
+    background: #F7FF00;
+    padding-left:6%;
+    padding-bottom:30px;
+    margin-bottom:50px;
+}
+
+.title {
+    padding-top: 70px;
+    margin-bottom:20px;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 80px;
+    line-height: 85px;
+    
+}
+
+.description {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 175%;
+    width: 50%;
+    max-width: 500px;
+    
+}
+

@@ -103,3 +103,21 @@
   margin-bottom: 100px;
 }
 
+.arrow {
+  width: 100px;
+  height: 100px;
+  border: 6px solid #000000;
+  transition: 0.3s;
+  border-radius: 16px;
+  margin-top: 100px;
+  padding:10px;
+}
+
+.arrow:hover {
+  box-shadow: 6px 6px 0px #000000;
+  transform: translateX(-10px);
+  transition: 0.3s;
+}
+
+
+

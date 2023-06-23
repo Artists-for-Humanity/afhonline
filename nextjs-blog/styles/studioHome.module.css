@@ -1,35 +1,3 @@
-.container{
-    /* font-family: 'Boring Sans Variable'; */
-
-}
-
-.hero{
-    background: #F7FF00;
-    padding-left:6%;
-    padding-bottom:30px;
-    margin-bottom:50px;
-}
-
-.title {
-    padding-top: 70px;
-    margin-bottom:20px;
-    font-style: normal;
-    font-weight: 1000;
-    font-size: 80px;
-    line-height: 85px;
-    
-}
-
-.description {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 175%;
-    width: 50%;
-    max-width: 500px;
-    
-}
-
 .subheader {
     font-style: normal;
     font-weight: 730;
@@ -57,3 +25,21 @@
     margin-left:6%;
     margin-top:20px;
 }
+
+
+.arrow {
+    width: 80px;
+    height: 80px;
+    border: 4px solid #000000;
+    transition: 0.3s;
+    border-radius: 16px;
+    margin-left: 10%;
+    margin-top: 2%;
+    padding:5px;
+  }
+  
+  .arrow:hover {
+    box-shadow: 6px 6px 0px #000000;
+    transform: translateX(-10px);
+    transition: 0.3s;
+  }
