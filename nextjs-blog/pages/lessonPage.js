@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/lessonPage.module.css";
 // import StudioGrid from "../components/StudioGrid";
@@ -7,12 +7,19 @@ import Image from 'next/image';
 
 
 const lessonPage = () => {
+
+    const [showSideMenu, setShowSideMenu] = useState(false);
+
+    const toggleSideMenu = () => {
+        setShowSideMenu(!showSideMenu);
+    };
     return (
         <div className={styles.container}>
             <Head>
                 <title>AFH ONLINE</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
 
             <div className={styles.title}>Doodles - to - Vector</div>
             <hr />
