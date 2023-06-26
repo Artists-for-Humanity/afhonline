@@ -1,18 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Head from "next/head";
 import styles from "../styles/lessonPage.module.css";
-// import StudioGrid from "../components/StudioGrid";
-// import LessonCard from "../components/LessonCard";
 import Image from 'next/image';
 
 
 const lessonPage = () => {
 
     const [showSideMenu, setShowSideMenu] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const videoRef = useRef(null);
 
     const toggleSideMenu = () => {
         setShowSideMenu(!showSideMenu);
     };
+
+    const handlePlayPause = () => {
+        //will play and pause video
+    };
+
+    const handleVolume = () => {
+        // will adjust volume of video
+    };
+
+    const handleFullscreen = () => {
+        // will full screen video a
+    };
+
     return (
         <div className={styles.container}>
             <Head>
@@ -22,35 +36,82 @@ const lessonPage = () => {
 
 
             <div className={styles.title}>Doodles - to - Vector</div>
-            <hr />
-            <div>
-                <iframe width="100%" height="1000px" src="https://www.youtube.com/embed/rfscVS0vtbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div>
-                {/* <img src="play-button.png" alt="Play" />
-                <div>
-                    <img src="volume-button.png" alt="Volume" />
-                    <img src="fullscreen-button.png" alt="Fullscreen" />
-                </div> */}
-            </div>
-            <hr />
-            <div>
-                <div className={styles.lessonDescription}>
-                    <div className={styles.title}> 2. Why the doodle? </div>
-                    <p className={styles.description}>Welcome to 'Doodle-to-Vector,' an exciting project where
-                        your doodles come to life in the digital world! Join us as we explore the magical world of transforming your hand-drawn creations into stunning and scalable vector graphics.</p>
-
-                    <div className={styles.buttons}>
-                        <div className={styles.button}>
-                            <Image></Image>
-                            <div className={styles.buttonText}> Starte Files </div>
-                        </div>
-                        <div className={styles.button}>
-                            <Image></Image>
-                            <div className={styles.buttonText}> Examples </div>
+            <div className={styles.content}>
+                <div className={styles.mainSection}>
+                    <div>
+                        <iframe
+                            ref={videoRef}
+                            width="100%"
+                            height="1000px"
+                            src="https://www.youtube.com/embed/rfscVS0vtbw"
+                            title="YouTube video player"
+                            allow=" autoplay;  encrypted-media; gyroscope;"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                    <div className={styles.controls}>
+                        <button onClick={handlePlayPause}>
+                            <Image
+                                src={isPlaying ? "/images/pause.png" : "/images/play.png"}
+                                width={50}
+                                height={50}
+                                alt={isPlaying ? "Pause" : "Play"}
+                            />
+                        </button>
+                        <div>
+                            <button onClick={handleVolume}>
+                                <Image
+                                    src="/images/volume.png"
+                                    width={50}
+                                    height={50}
+                                    alt="Volume"
+                                />
+                            </button>
+                            <button onClick={handleFullscreen}>
+                                <Image
+                                    src={isFullscreen ? "/images/exit-fullscreen.png" : "/images/fullscreen.png"}
+                                    width={50}
+                                    height={50}
+                                    alt={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+                                />
+                            </button>
                         </div>
                     </div>
+                    <hr />
+                    <div>
+                        <div className={styles.lessonDescription}>
+                            <div className={styles.title}> 2. Why the Doodle?? </div>
+                            <p className={styles.description}>Welcome to 'Doodle-to-Vector,' an exciting project where
+                                your doodles come to life in the digital world! Join us as we explore the magical world of transforming your hand-drawn creations into stunning and scalable vector graphics.</p>
 
+                            <div className={styles.buttons}>
+                                <div className={styles.button}>
+                                    <Image
+                                        src="/images/paper-clip.svg"
+                                        width={50}
+                                        height={50}
+                                        alt="paper clip"
+                                        className={styles.arrow}
+                                    />
+                                    <div className={styles.buttonText}> Starter Files </div>
+                                </div>
+                                <div className={styles.button}>
+                                    <Image
+                                        src="/images/paper-clip.svg"
+                                        width={50}
+                                        height={50}
+                                        alt="paper clip"
+                                        className={styles.arrow}
+                                    />
+                                    <div className={styles.buttonText}> Examples </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.menuSection}>
+                    <div>HI I'm the menu</div>
                 </div>
             </div>
 
@@ -89,11 +150,13 @@ const lessonPage = () => {
         }
 
         button {
-          padding: 0.5rem 1rem;
-          font-weight: bold;
+            all: unset;
         }
       `}</style>
         </div >
+
+
+
     );
 };
 
