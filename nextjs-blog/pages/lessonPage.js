@@ -111,7 +111,45 @@ const lessonPage = () => {
                     </div>
                 </div>
                 <div className={styles.menuSection}>
-                    <div>HI I'm the menu</div>
+                    <div className={styles.headerSection}>
+                        <div className={styles.menuTitle}>Course Content</div>
+                        <Image
+                            src="/images/exit.svg"
+                            width={60}
+                            height={60}
+                            alt="Exit"
+                            className={styles.menuExit}
+                            onClick={toggleSideMenu}
+                        />
+                    </div>
+                    {showSideMenu && (
+                        <div className={styles.dropdownMenu}>
+                            <div className={styles.dropdownSection}>
+                                <div className={styles.dropdownTitle}>Lesson 1</div>
+                                <div className={styles.dropdownContent}>
+                                    <div>Section 1</div>
+                                    <div>Section 2</div>
+                                    <div>Section 3</div>
+                                </div>
+                            </div>
+                            <div className={styles.dropdownSection}>
+                                <div className={styles.dropdownTitle}>Lesson 2</div>
+                                <div className={styles.dropdownContent}>
+                                    <div>Section 1</div>
+                                    <div>Section 2</div>
+                                    <div>Section 3</div>
+                                </div>
+                            </div>
+                            <div className={styles.dropdownSection}>
+                                <div className={styles.dropdownTitle}>Lesson 3</div>
+                                <div className={styles.dropdownContent}>
+                                    <div>Section 1</div>
+                                    <div>Section 2</div>
+                                    <div>Section 3</div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
