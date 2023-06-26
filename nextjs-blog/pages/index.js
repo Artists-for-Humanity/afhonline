@@ -48,6 +48,7 @@ const Home = () => {
             />
           </div>
           <LessonCard
+            link='lesson_page'
             studiochip="Graphic Design"
             title="Doodle-to-Vector"
             author="Mikey Guderama"
