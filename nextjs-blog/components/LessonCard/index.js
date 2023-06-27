@@ -1,11 +1,11 @@
 import styles from "./styles.module.css";
 
-const LessonCard = ({ image, studiochip, title, author, caption }) => {
+const LessonCard = ({ image, studiochip, title, author, caption, link }) => {
     return (
         // <div className={styles.Block} style={{ "--color": color }}>
         //     <div className={styles.Inner}>{name}</div>
         // </div>
-        <div className={styles.lessonCard}>
+        <a href={link} className={styles.lessonCard}>
             <div className={styles.previewImage}></div>
             <div className={styles.cardInfo}>
                 <div className={styles.studioChip}>{studiochip}</div>
@@ -13,7 +13,7 @@ const LessonCard = ({ image, studiochip, title, author, caption }) => {
                 <div className={styles.cardAuthor}>By {author}</div>
                 <div className={styles.cardDescription}> {caption} </div>
             </div>
-        </div>
+        </a>
     );
 };
 
