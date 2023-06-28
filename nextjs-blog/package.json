@@ -11,5 +11,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanity": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/css-modules": "^1.0.2",
+    "typescript": "^5.1.5"
   }
 }

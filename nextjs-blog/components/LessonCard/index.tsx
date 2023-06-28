@@ -1,10 +1,24 @@
+import React from "react";
 import styles from "./styles.module.css";
 
-const LessonCard = ({ image, studiochip, title, author, caption, link }) => {
+interface LessonCardProps {
+    image: string;
+    studiochip: string;
+    title: string;
+    author: string;
+    caption: string;
+    link: string;
+}
+
+const LessonCard: React.FC<LessonCardProps> = ({
+    image,
+    studiochip,
+    title,
+    author,
+    caption,
+    link
+}) => {
     return (
-        // <div className={styles.Block} style={{ "--color": color }}>
-        //     <div className={styles.Inner}>{name}</div>
-        // </div>
         <a href={link} className={styles.lessonCard}>
             <div className={styles.previewImage}></div>
             <div className={styles.cardInfo}>
