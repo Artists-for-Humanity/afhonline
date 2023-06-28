@@ -8,12 +8,12 @@ import Image from 'next/image';
 
 
 
-const PaintHome = () => {
+const PhotoHome: React.FC = () => {
     return (
         <div className={styles.container}>
 
             <StudioHome
-                studio={"Painting"}
+                studio={"Photography"}
                 description={"a field encompassing art, digital product design, digital media or an advertising and media made with a software-based, electronic and/or data-driven engine."}
             />
 
@@ -60,24 +60,28 @@ const PaintHome = () => {
 
             <div className={styles.lessonCards}>
                 <LessonCard
+                    link='lessonPage'
                     studiochip="Graphic Design"
                     title="Doodle-to-Vector"
                     author="Mikey Guderama"
                     caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
                 />
                 <LessonCard
+                    link='lessonPage'
                     studiochip="Graphic Design"
                     title="Doodle-to-Vector"
                     author="Mikey Guderama"
                     caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
                 />
                 <LessonCard
+                    link='lessonPage'
                     studiochip="Graphic Design"
                     title="Doodle-to-Vector"
                     author="Mikey Guderama"
                     caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
                 />
                 <LessonCard
+                    link='lessonPage'
                     studiochip="Graphic Design"
                     title="Doodle-to-Vector"
                     author="Mikey Guderama"
@@ -128,4 +132,4 @@ const PaintHome = () => {
     );
 };
 
-export default PaintHome;
+export default PhotoHome;

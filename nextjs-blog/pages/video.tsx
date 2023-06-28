@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 
 
-const VideoHome = () => {
+const VideoHome: React.FC = () => {
     return (
         <div className={styles.container}>
 
@@ -60,24 +60,28 @@ const VideoHome = () => {
 
             <div className={styles.lessonCards}>
                 <LessonCard
+                    link='lessonPage'
                     studiochip="Graphic Design"
                     title="Doodle-to-Vector"
                     author="Mikey Guderama"
                     caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
                 />
                 <LessonCard
+                    link='lessonPage'
                     studiochip="Graphic Design"
                     title="Doodle-to-Vector"
                     author="Mikey Guderama"
                     caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
                 />
                 <LessonCard
+                    link='lessonPage'
                     studiochip="Graphic Design"
                     title="Doodle-to-Vector"
                     author="Mikey Guderama"
                     caption="Unleash your inner doodler and learn how to transform your sketches into vibrant and scalable vector graphics."
                 />
                 <LessonCard
+                    link='lessonPage'
                     studiochip="Graphic Design"
                     title="Doodle-to-Vector"
                     author="Mikey Guderama"
