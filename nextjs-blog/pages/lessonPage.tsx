@@ -4,7 +4,7 @@ import styles from "../styles/lessonPage.module.css";
 import Image from 'next/image';
 
 
-const lessonPage = () => {
+const lessonPage: React.FC = () => {
 
     const [showSideMenu, setShowSideMenu] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);

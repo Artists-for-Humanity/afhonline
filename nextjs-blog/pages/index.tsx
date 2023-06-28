@@ -6,7 +6,7 @@ import LessonCard from "../components/LessonCard";
 import Image from 'next/image';
 
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div className={styles.container}>
       <Head>
