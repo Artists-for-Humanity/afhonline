@@ -1,7 +1,19 @@
 import styles from "./styles.module.css";
 import Image from 'next/image'
 
-const MentorCard = ({ first, last, role, headshot }) => {
+interface MentorCardProps {
+    first: string;
+    last: string;
+    role: string;
+    headshot: string;
+}
+
+const MentorCard: React.FC<MentorCardProps> = ({
+    first,
+    last,
+    role,
+    headshot
+}) => {
     return (
         <div className={styles.card}>
             <Image

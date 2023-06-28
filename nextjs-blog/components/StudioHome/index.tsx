@@ -2,10 +2,19 @@ import React from "react";
 import Head from "next/head";
 import styles from "./styles.module.css";
 
+interface studioHomeProps {
+  studio: String;
+  description: String;
+
+}
 
 
 
-const studioHome = ({ studio, description }) => {
+
+const studioHome: React.FC<studioHomeProps> = ({
+  studio,
+  description
+}) => {
   return (
     <div className={styles.container}>
       <Head>
