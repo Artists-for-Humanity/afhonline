@@ -24,8 +24,9 @@
 
 .horizontalLine {
     border: none;
-    border-top: 6px solid black;
+    border-top: 4px solid black;
     margin:0px;
+    width:75%;
   }
 
 .lessonDescription {
@@ -79,8 +80,7 @@
 }
 
 .menuTitle {
-    font-size: 30px;
-    margin-top:10px;
+    font-size: 40px;
     font-weight: 730;
     line-height: 120%;
     cursor: pointer
