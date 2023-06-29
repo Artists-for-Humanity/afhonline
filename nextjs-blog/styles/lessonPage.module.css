@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .content {
     display:flex;
@@ -6,12 +11,22 @@
     width:75%;
 }
 
+.fullWidth {
+    width: 100%;
+  }
+
 .title {
-    font-size:64px;
+    font-size:68px;
     font-weight:bold;
     margin:10px;
     margin-bottom:30px;
 }
+
+.horizontalLine {
+    border: none;
+    border-top: 6px solid black;
+    margin:0px;
+  }
 
 .lessonDescription {
     margin:100px;
@@ -64,14 +79,27 @@
 }
 
 .menuTitle {
-    font-size: 40px;
+    font-size: 30px;
+    margin-top:10px;
     font-weight: 730;
     line-height: 120%;
+    cursor: pointer
 
 }
 
 .menuExit {
     cursor:pointer
+}
+
+
+.menuOpen {
+    height: 60px;
+    width:60px;
+    /* position:absolute; */
+    padding:10px;
+    border: 3px solid black;
+    border-radius: 6px;
+
 }
 
 .headerSection{
@@ -95,10 +123,6 @@
     border-radius: 2px;
   }
   
-.dropdownContent {
-    /* margin-top: 10px; */
-}
-  
 .dropdownSectionItem {
     padding: 10px;
     padding-top:20px;
@@ -121,3 +145,5 @@
 .dropdownSectionItem:hover {
     background-color: #FDFFCC;
 }
+
+
