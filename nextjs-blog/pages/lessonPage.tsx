@@ -7,12 +7,23 @@ import Image from 'next/image';
 const lessonPage: React.FC = () => {
 
     const [showSideMenu, setShowSideMenu] = useState(false);
+    const [selectedLesson, setSelectedLesson] = useState<number | null>(null);
+    const [selectedSection, setSelectedSection] = useState<number | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const videoRef = useRef(null);
 
     const toggleSideMenu = () => {
         setShowSideMenu(!showSideMenu);
+    };
+
+    const handleLessonClick = (lesson: number) => {
+        setSelectedLesson(lesson);
+        setSelectedSection(null); // Reset the selected section
+    };
+
+    const handleSectionClick = (section: number) => {
+        setSelectedSection(section);
     };
 
     const handlePlayPause = () => {
@@ -124,31 +135,41 @@ const lessonPage: React.FC = () => {
                     </div>
                     {showSideMenu && (
                         <div className={styles.dropdownMenu}>
+                            {/* lesson 1 drop down */}
                             <div className={styles.dropdownSection}>
-                                <div className={styles.dropdownTitle}>Lesson 1</div>
-                                <div className={styles.dropdownContent}>
-                                    <div>Section 1</div>
-                                    <div>Section 2</div>
-                                    <div>Section 3</div>
-                                </div>
+                                <div className={`${styles.dropdownTitle} ${selectedLesson === 1 && styles.selectedLesson}`} onClick={() => handleLessonClick(1)}> Lesson 1 </div>
+                                {selectedLesson === 1 && (
+                                    <div className={styles.dropdownContent}>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 1 && styles.selectedSection}`} onClick={() => handleSectionClick(1)}> Section 1 </div>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 2 && styles.selectedSection}`} onClick={() => handleSectionClick(2)}> Section 2 </div>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 3 && styles.selectedSection}`} onClick={() => handleSectionClick(3)}> Section 3 </div>
+                                    </div>
+                                )}
                             </div>
+                            {/* lesson 2 drop down */}
                             <div className={styles.dropdownSection}>
-                                <div className={styles.dropdownTitle}>Lesson 2</div>
-                                <div className={styles.dropdownContent}>
-                                    <div>Section 1</div>
-                                    <div>Section 2</div>
-                                    <div>Section 3</div>
-                                </div>
+                                <div className={`${styles.dropdownTitle} ${selectedLesson === 2 && styles.selectedLesson}`} onClick={() => handleLessonClick(2)}> Lesson 2 </div>
+                                {selectedLesson === 2 && (
+                                    <div className={styles.dropdownContent}>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 1 && styles.selectedSection}`} onClick={() => handleSectionClick(1)}> Section 1 </div>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 2 && styles.selectedSection}`} onClick={() => handleSectionClick(2)}> Section 2 </div>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 3 && styles.selectedSection}`} onClick={() => handleSectionClick(3)}> Section 3 </div>
+                                    </div>
+                                )}
                             </div>
+                            {/* lesson 3 drop down */}
                             <div className={styles.dropdownSection}>
-                                <div className={styles.dropdownTitle}>Lesson 3</div>
-                                <div className={styles.dropdownContent}>
-                                    <div>Section 1</div>
-                                    <div>Section 2</div>
-                                    <div>Section 3</div>
-                                </div>
+                                <div className={`${styles.dropdownTitle} ${selectedLesson === 3 && styles.selectedLesson}`} onClick={() => handleLessonClick(3)}> Lesson 3 </div>
+                                {selectedLesson === 3 && (
+                                    <div className={styles.dropdownContent}>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 1 && styles.selectedSection}`} onClick={() => handleSectionClick(1)}> Section 1 </div>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 2 && styles.selectedSection}`} onClick={() => handleSectionClick(2)}> Section 2 </div>
+                                        <div className={`${styles.dropdownSectionItem} ${selectedSection === 3 && styles.selectedSection}`} onClick={() => handleSectionClick(3)}> Section 3 </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
+
                     )}
                 </div>
             </div>

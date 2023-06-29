@@ -82,3 +82,42 @@
     padding:10px;
     padding-top:20px;
 }
+
+.dropdownTitle {
+    font-size: 40px;
+    font-weight: 730;
+    line-height: 120%;
+    cursor: pointer;
+    padding: 10px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border: 1px solid black;
+    border-radius: 2px;
+  }
+  
+.dropdownContent {
+    /* margin-top: 10px; */
+}
+  
+.dropdownSectionItem {
+    padding: 10px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+}
+  
+.selectedLesson {
+    background-color: #F7FF00;
+}
+.selectedSection {
+    background-color: #FDFFCC;
+}
+  
+.dropdownTitle:hover {
+    background-color: #F7FF00;
+}
+.dropdownSectionItem:hover {
+    background-color: #FDFFCC;
+}
