@@ -6,13 +6,30 @@ import Image from 'next/image';
 
 const lessonPage: React.FC = () => {
 
-    const [showSideMenu, setShowSideMenu] = useState(false);
+    const [showSideMenu, setShowSideMenu] = useState(true);
+    const [showDropDown, setDropDown] = useState(false);
+    const [selectedLesson, setSelectedLesson] = useState<number | null>(null);
+    const [selectedSection, setSelectedSection] = useState<number | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const videoRef = useRef(null);
 
     const toggleSideMenu = () => {
         setShowSideMenu(!showSideMenu);
+    };
+
+    const toggleDropDown = () => {
+        setDropDown(!showDropDown);
+    };
+
+
+    const handleLessonClick = (lesson: number) => {
+        setSelectedLesson(lesson);
+        setSelectedSection(null); // Reset the selected section
+    };
+
+    const handleSectionClick = (section: number) => {
+        setSelectedSection(section);
     };
 
     const handlePlayPause = () => {
@@ -34,125 +51,148 @@ const lessonPage: React.FC = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-
-            <div className={styles.title}>Doodles - to - Vector</div>
-            <div className={styles.content}>
-                <div className={styles.mainSection}>
-                    <div>
-                        <iframe
-                            ref={videoRef}
-                            width="100%"
-                            height="1000px"
-                            src="https://www.youtube.com/embed/rfscVS0vtbw"
-                            title="YouTube video player"
-                            allow=" autoplay;  encrypted-media; gyroscope;"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                    <div className={styles.controls}>
-                        <button onClick={handlePlayPause}>
-                            <Image
-                                src={isPlaying ? "/images/pause.png" : "/images/play.png"}
-                                width={50}
-                                height={50}
-                                alt={isPlaying ? "Pause" : "Play"}
-                            />
-                        </button>
+            <div className={styles.container}>
+                <div className={styles.title}>Doodles - to - Vector</div>
+                <hr className={styles.horizontalLine} />
+                <div className={styles.content}>
+                    <div className={`${styles.mainSection} ${!showSideMenu && styles.fullWidth}`}>
                         <div>
-                            <button onClick={handleVolume}>
-                                <Image
-                                    src="/images/volume.png"
-                                    width={50}
-                                    height={50}
-                                    alt="Volume"
-                                />
-                            </button>
-                            <button onClick={handleFullscreen}>
-                                <Image
-                                    src={isFullscreen ? "/images/exit-fullscreen.png" : "/images/fullscreen.png"}
-                                    width={50}
-                                    height={50}
-                                    alt={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
-                                />
-                            </button>
+                            <iframe
+                                ref={videoRef}
+                                width="100%"
+                                height="600px;"
+                                src="https://www.youtube.com/embed/rfscVS0vtbw"
+                                title="YouTube video player"
+                                allow=" autoplay;  encrypted-media; gyroscope;"
+                                allowFullScreen
+                            ></iframe>
                         </div>
-                    </div>
-                    <hr />
-                    <div>
-                        <div className={styles.lessonDescription}>
-                            <div className={styles.title}> 2. Why the Doodle?? </div>
-                            <p className={styles.description}>Welcome to 'Doodle-to-Vector,' an exciting project where
-                                your doodles come to life in the digital world! Join us as we explore the magical world of transforming your hand-drawn creations into stunning and scalable vector graphics.</p>
-
-                            <div className={styles.buttons}>
-                                <div className={styles.button}>
+                        <div className={styles.controls}>
+                            <button onClick={handlePlayPause}>
+                                <Image
+                                    src={isPlaying ? "/images/pause.png" : "/images/play.png"}
+                                    width={50}
+                                    height={50}
+                                    alt={isPlaying ? "Pause" : "Play"}
+                                />
+                            </button>
+                            <div>
+                                <button onClick={handleVolume}>
                                     <Image
-                                        src="/images/paper-clip.svg"
+                                        src="/images/volume.png"
                                         width={50}
                                         height={50}
-                                        alt="paper clip"
-                                        className={styles.arrow}
+                                        alt="Volume"
                                     />
-                                    <div className={styles.buttonText}> Starter Files </div>
-                                </div>
-                                <div className={styles.button}>
+                                </button>
+                                <button onClick={handleFullscreen}>
                                     <Image
-                                        src="/images/paper-clip.svg"
+                                        src={isFullscreen ? "/images/exit-fullscreen.png" : "/images/fullscreen.png"}
                                         width={50}
                                         height={50}
-                                        alt="paper clip"
-                                        className={styles.arrow}
+                                        alt={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
                                     />
-                                    <div className={styles.buttonText}> Examples </div>
-                                </div>
+                                </button>
                             </div>
+                        </div>
+                        <hr />
+                        <div>
+                            <div className={styles.lessonDescription}>
+                                <div className={styles.title}> 2. Why the Doodle?? </div>
+                                <p className={styles.description}>Welcome to 'Doodle-to-Vector,' an exciting project where
+                                    your doodles come to life in the digital world! Join us as we explore the magical world of transforming your hand-drawn creations into stunning and scalable vector graphics.</p>
 
+                                <div className={styles.buttons}>
+                                    <div className={styles.button}>
+                                        <Image
+                                            src="/images/paper-clip.svg"
+                                            width={50}
+                                            height={50}
+                                            alt="paper clip"
+                                            className={styles.arrow}
+                                        />
+                                        <div className={styles.buttonText}> Starter Files </div>
+                                    </div>
+                                    <div className={styles.button}>
+                                        <Image
+                                            src="/images/paper-clip.svg"
+                                            width={50}
+                                            height={50}
+                                            alt="paper clip"
+                                            className={styles.arrow}
+                                        />
+                                        <div className={styles.buttonText}> Examples </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className={styles.menuSection}>
-                    <div className={styles.headerSection}>
-                        <div className={styles.menuTitle}>Course Content</div>
+                    {!showSideMenu && (
                         <Image
-                            src="/images/exit.svg"
+                            src="/images/backArrow.png"
                             width={60}
                             height={60}
-                            alt="Exit"
-                            className={styles.menuExit}
+                            alt="Open"
+                            className={styles.menuOpen}
                             onClick={toggleSideMenu}
                         />
-                    </div>
+                    )}
                     {showSideMenu && (
-                        <div className={styles.dropdownMenu}>
-                            <div className={styles.dropdownSection}>
-                                <div className={styles.dropdownTitle}>Lesson 1</div>
-                                <div className={styles.dropdownContent}>
-                                    <div>Section 1</div>
-                                    <div>Section 2</div>
-                                    <div>Section 3</div>
-                                </div>
+                        <div className={styles.menuSection}>
+                            <div className={styles.headerSection}>
+                                <div className={styles.menuTitle} onClick={toggleDropDown} >Course Content</div>
+                                <Image
+                                    src="/images/cross.png"
+                                    width={50}
+                                    height={50}
+                                    alt="Exit"
+                                    className={styles.menuExit}
+                                    onClick={toggleSideMenu}
+                                />
                             </div>
-                            <div className={styles.dropdownSection}>
-                                <div className={styles.dropdownTitle}>Lesson 2</div>
-                                <div className={styles.dropdownContent}>
-                                    <div>Section 1</div>
-                                    <div>Section 2</div>
-                                    <div>Section 3</div>
+                            {showDropDown && (
+                                <div className={styles.dropdownMenu}>
+                                    {/* lesson 1 drop down */}
+                                    <div className={styles.dropdownSection}>
+                                        <div className={`${styles.dropdownTitle} ${selectedLesson === 1 && styles.selectedLesson}`} onClick={() => handleLessonClick(1)}> Lesson 1 </div>
+                                        {selectedLesson === 1 && (
+                                            <div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 1 && styles.selectedSection}`} onClick={() => handleSectionClick(1)}> Section 1 </div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 2 && styles.selectedSection}`} onClick={() => handleSectionClick(2)}> Section 2 </div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 3 && styles.selectedSection}`} onClick={() => handleSectionClick(3)}> Section 3 </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                    {/* lesson 2 drop down */}
+                                    <div className={styles.dropdownSection}>
+                                        <div className={`${styles.dropdownTitle} ${selectedLesson === 2 && styles.selectedLesson}`} onClick={() => handleLessonClick(2)}> Lesson 2 </div>
+                                        {selectedLesson === 2 && (
+                                            <div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 1 && styles.selectedSection}`} onClick={() => handleSectionClick(1)}> Section 1 </div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 2 && styles.selectedSection}`} onClick={() => handleSectionClick(2)}> Section 2 </div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 3 && styles.selectedSection}`} onClick={() => handleSectionClick(3)}> Section 3 </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                    {/* lesson 3 drop down */}
+                                    <div className={styles.dropdownSection}>
+                                        <div className={`${styles.dropdownTitle} ${selectedLesson === 3 && styles.selectedLesson}`} onClick={() => handleLessonClick(3)}> Lesson 3 </div>
+                                        {selectedLesson === 3 && (
+                                            <div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 1 && styles.selectedSection}`} onClick={() => handleSectionClick(1)}> Section 1 </div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 2 && styles.selectedSection}`} onClick={() => handleSectionClick(2)}> Section 2 </div>
+                                                <div className={`${styles.dropdownSectionItem} ${selectedSection === 3 && styles.selectedSection}`} onClick={() => handleSectionClick(3)}> Section 3 </div>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.dropdownSection}>
-                                <div className={styles.dropdownTitle}>Lesson 3</div>
-                                <div className={styles.dropdownContent}>
-                                    <div>Section 1</div>
-                                    <div>Section 2</div>
-                                    <div>Section 3</div>
-                                </div>
-                            </div>
+
+                            )}
                         </div>
                     )}
                 </div>
             </div>
-
 
 
 
