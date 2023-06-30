@@ -11,6 +11,13 @@
     width:75%;
 }
 
+.horizontalLine {
+    border: none;
+    border-top: 4px solid black;
+    margin:0px;
+    width:75%;
+}
+
 .fullWidth {
     width: 100%;
   }
@@ -22,12 +29,7 @@
     margin-bottom:30px;
 }
 
-.horizontalLine {
-    border: none;
-    border-top: 4px solid black;
-    margin:0px;
-    width:75%;
-  }
+
 
 .lessonDescription {
     margin:100px;
@@ -95,10 +97,10 @@
 .menuOpen {
     height: 60px;
     width:60px;
-    /* position:absolute; */
     padding:10px;
     border: 3px solid black;
     border-radius: 6px;
+    margin-top:20px;
 
 }
 

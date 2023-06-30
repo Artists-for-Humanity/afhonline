@@ -99,6 +99,11 @@ const Home: React.FC = () => {
               name: "Photo",
               color: "#FFBC05"
             },
+            {
+              slug: "print",
+              name: "Print",
+              color: "#ff87ab"
+            },
           ]}
         />
       </div>
