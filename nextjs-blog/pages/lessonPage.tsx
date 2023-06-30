@@ -53,7 +53,7 @@ const lessonPage: React.FC = () => {
 
             <div className={styles.container}>
                 <div className={styles.title}>Doodles - to - Vector</div>
-                <hr className={styles.horizontalLine} />
+                <hr className={`${styles.horizontalLine} ${!showSideMenu && styles.fullWidth}`} />
                 <div className={styles.content}>
                     <div className={`${styles.mainSection} ${!showSideMenu && styles.fullWidth}`}>
                         <div>
