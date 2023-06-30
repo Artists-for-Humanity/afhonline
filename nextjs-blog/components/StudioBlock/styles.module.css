@@ -24,7 +24,7 @@
 }
 
 .Block:hover::before {
-  transform: rotate(15deg) ;
+  transform: rotate(10deg) ;
   border-radius: 6px;
   
 }
