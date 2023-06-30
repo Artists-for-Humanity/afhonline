@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import styles from "./styles.module.css";
+import Image from 'next/image';
 
 interface studioHomeProps {
   studio: String;
@@ -23,6 +24,15 @@ const studioHome: React.FC<studioHomeProps> = ({
       </Head>
 
       <div className={styles.hero}>
+        <a href={"/"}>
+          <Image
+            src={"/images/logo.png"}
+            width={60}
+            height={60}
+            alt={"Home Button"}
+            className={styles.homeButton}
+          />
+        </a>
         <div className={styles.title}> {studio} </div>
         <div className={styles.description}> {description} </div>
       </div>
